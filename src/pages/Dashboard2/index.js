@@ -7,7 +7,7 @@ import Background from '../../components/Background';
 import { Container, Title, List } from './styles';
 
 const data = [1, 2, 3, 4, 5];
-function Dashboard({ isFocused }) {
+function Dashboard2({ isFocused }) {
   const [appointments, setAppointments] = useState([]);
 
   async function loadAppointments() {
@@ -37,16 +37,16 @@ function Dashboard({ isFocused }) {
   return (
     <Background>
       <Container>
-        <Title>Agendamentos</Title>
+        <Title>Agendamentos22</Title>
       </Container>
     </Background>
   );
 }
-Dashboard.navigationOptions = {
-  tabBarLabel: 'Agendamentos',
+Dashboard2.navigationOptions = {
+  tabBarLabel: 'Dashboard2',
   tabBarIcon: ({ tintColor }) => (
     <Icon name="event" size={20} color={tintColor} />
   ),
 };
 
-export default withNavigationFocus(Dashboard);
+export default withNavigationFocus(Dashboard2);

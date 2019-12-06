@@ -1,24 +1,42 @@
-import { StyleSheet } from 'react-native';
-import { colors, general } from '../../../styles';
+import { Platform } from 'react-native';
+import styled from 'styled-components/native';
+import Input from '../../../components/Input';
+import Button from '../../../components/Button';
 
-const styles = StyleSheet.create({
-  ...general.formStyles,
-  ...general.buttonStyles,
+export const Container = styled.KeyboardAvoidingView.attrs({
+  enabled: Platform.OS === 'ios',
+  behavior: 'padding',
+})`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  margin-top: 50px;
+`;
 
-  container: {
-    flex: 1,
-    backgroundColor: colors.background,
-    justifyContent: 'center',
-    alignItems: 'stretch',
+export const Form = styled.ScrollView.attrs({
+  showsVerticalScrollIndicator: false,
+  contentContainerStyle: {
     padding: 30,
   },
+})`
+  align-self: stretch;
+`;
 
-  title: {
-    fontSize: 28,
-    marginBottom: 20,
-    color: colors.white,
-    textAlign: 'center',
-  },
-});
+export const FormInput = styled(Input)`
+  margin-bottom: 10px;
+`;
 
-export default styles;
+export const SubmitButton = styled(Button)`
+  margin-top: 5px;
+`;
+
+export const SignLink = styled.TouchableOpacity`
+  margin-top: 20px;
+`;
+
+export const SignLinkText = styled.Text`
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+`;

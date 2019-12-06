@@ -1,3 +1,4 @@
+/*
 import colors from './colors';
 
 export const formStyles = {
@@ -35,3 +36,4 @@ export const buttonStyles = {
     color: colors.white,
   },
 };
+*/

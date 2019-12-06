@@ -9,6 +9,7 @@ import SignIn from './pages/Auth/SignIn';
 // import SignUp from './pages/SignUp';
 
 import Dashboard from './pages/Dashboard';
+import Dashboard2 from './pages/Dashboard2';
 // import Profile from './pages/Profile';
 
 // import SelectProvider from './pages/New/SelectProvider';
@@ -27,6 +28,7 @@ export default (signedIn = false) =>
         App: createBottomTabNavigator(
           {
             Dashboard,
+            Dashboard2,
 
             // Profile,
           },
