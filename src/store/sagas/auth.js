@@ -7,8 +7,8 @@ import AuthActions from '../ducks/auth';
 import NavigationService from '../../services/navigation';
 
 export function* init() {
-  const token = yield call([AsyncStorage, 'getItem'], '@Omni:token');
-
+  const token = yield call([AsyncStorage, 'getItem'], '@Oficina5:token');
+  console.tron.log(token);
   if (token) yield put(AuthActions.signInSuccess(token));
 
   // if (team) {
@@ -27,7 +27,7 @@ export function* signIn({ email, password }) {
 
     const { token } = data;
 
-    yield call([AsyncStorage, 'setItem'], '@Omni:token', token);
+    yield call([AsyncStorage, 'setItem'], '@Oficina5:token', token);
     yield put(AuthActions.signInSuccess(token));
 
     NavigationService.navigate('App');

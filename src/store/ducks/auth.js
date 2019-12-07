@@ -28,11 +28,11 @@ export const success = (state, { token }) =>
   state.merge({ signedIn: true, token });
 
 // export const logout = state => state.merge({ signedIn: false, token: null });
-// export const checkSuccess = state => state.merge({ authChecked: true });
+export const checkSuccess = state => state.merge({ authChecked: true });
 
 /* Reducers to types */
 export const reducer = createReducer(INITIAL_STATE, {
   [Types.SIGN_IN_SUCCESS]: success,
   // [Types.SIGN_OUT]: logout,
-  // [Types.INIT_CHECK_SUCCESS]: checkSuccess,
+  [Types.INIT_CHECK_SUCCESS]: checkSuccess,
 });
